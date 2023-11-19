@@ -57,4 +57,10 @@ public class Processor8086Simulator {
             System.out.println("Nieznany rejestr: " + dest);
         }
     }
+    // Wyświetlanie stanu rejestrów
+    public void displayRegisters() {
+        for (String reg : registers.keySet()) {
+            System.out.println(reg + " = " + registers.get(reg));
+        }
+    }
 }
