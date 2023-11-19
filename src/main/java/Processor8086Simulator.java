@@ -38,5 +38,14 @@ public class Processor8086Simulator {
         } else {
             System.out.println("Nieznany rejestr: " + dest);
         }
-
+    }
+    // Metoda do operacji INC (increment)
+    public void INC(String dest) {
+        if (registers.containsKey(dest)) {
+            int originalValue = registers.get(dest);
+            registers.put(dest, originalValue + 1);
+        } else {
+            System.out.println("Nieznany rejestr: " + dest);
+        }
+    }
 }
