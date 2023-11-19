@@ -57,6 +57,16 @@ public class Processor8086Simulator {
             System.out.println("Nieznany rejestr: " + dest);
         }
     }
+    // Metoda do operacji MUL
+    public void MUL(String dest, int value) {
+        if (registers.containsKey(dest)) {
+            int originalValue = registers.get(dest);
+            registers.put(dest, originalValue * value);
+        } else {
+            System.out.println("Nieznany rejestr: " + dest);
+        }
+    }
+
     // Wyświetlanie stanu rejestrów
     public void displayRegisters() {
         for (String reg : registers.keySet()) {
