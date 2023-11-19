@@ -48,4 +48,13 @@ public class Processor8086Simulator {
             System.out.println("Nieznany rejestr: " + dest);
         }
     }
+    // Metoda do operacji DEC (decrement)
+    public void DEC(String dest) {
+        if (registers.containsKey(dest)) {
+            int originalValue = registers.get(dest);
+            registers.put(dest, originalValue - 1);
+        } else {
+            System.out.println("Nieznany rejestr: " + dest);
+        }
+    }
 }
